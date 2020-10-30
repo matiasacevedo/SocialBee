@@ -7,5 +7,11 @@
     <string name="text_button_login">Login</string>
     <string name="dont_have_account">No tienes cuenta?,</string>
     <string name="create_here">Crea una aquí</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_password_create_account">Contraseña</string>
+    <string name="hint_confirm_password">Confirme contraseña</string>
+    <string name="text_button_joinus">Unirse</string>
 
 </resources>

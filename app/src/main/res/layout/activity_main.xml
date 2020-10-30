@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Toolbar
+            android:id="@+id/toolbarMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/toolbarImage"
+                android:src="@drawable/logo_beerconf_horizontal"/>
+
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
