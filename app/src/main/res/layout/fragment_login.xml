@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@drawable/fcytgram"
+                android:background="@drawable/banner_social_bee"
                 />
 
         </RelativeLayout>
@@ -40,6 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@color/colorAccent"
                 android:padding="@dimen/padding_horizontal_login"
                 >
 

@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.appbar.AppBarLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,7 +32,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:src="@drawable/bannerBee"
+                    android:src="@drawable/banner_social_bee"
                     android:scaleType="centerCrop"/>
 
                 <androidx.cardview.widget.CardView
