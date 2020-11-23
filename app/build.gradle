@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "project.socialbeed"
+        applicationId "project.socialbee"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
