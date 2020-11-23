@@ -49,7 +49,7 @@
                             android:id="@+id/tvDetailNombreLugar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nombre del lugar"
+                            android:text="Nombre del usuario"
                             android:textSize="30sp"
                             android:textStyle="bold"
                             android:textColor="@color/colorPrimary"

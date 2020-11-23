@@ -51,7 +51,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="40dp"/>
                     <TextView
-                        android:id="@+id/tvDetailSpeakerName"
+                        android:id="@+id/tvSpeakerTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Speaker Name"
@@ -63,17 +63,7 @@
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"/>
                     <TextView
-                        android:id="@+id/tvDetailSpeakerJobtitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Job title"
-                        android:gravity="center_horizontal"
-                        android:textSize="15sp"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginLeft="15dp"/>
-                    <TextView
-                        android:id="@+id/tvDetailSpeakerWorkplace"
+                        android:id="@+id/tvDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Workplace"
@@ -91,7 +81,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center_horizontal"/>
                     <TextView
-                        android:id="@+id/tvDetailSpeakerBiography"
+                        android:id="@+id/tvUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Lorem ipsum"
