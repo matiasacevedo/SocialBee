@@ -7,6 +7,12 @@
     <dimen name="toolbarImage">70dp</dimen>
     <dimen name="activity_vertical_margin">18dp</dimen>
     <dimen name="edittext_margin_createaccount">12dp</dimen>
-
+    <dimen name="cardCornerRadio">4dp</dimen>
+    <dimen name="layoutMargin">5dp</dimen>
+    <dimen name="cardElevation">1dp</dimen>
+    <dimen name="imageLayoutHeight">100dp</dimen>
+    <dimen name="imageLayoutWidth">100dp</dimen>
+    <dimen name="layoutMarginImage">10dp</dimen>
+    <dimen name="textMarginTop">30px</dimen>
 
 </resources>
