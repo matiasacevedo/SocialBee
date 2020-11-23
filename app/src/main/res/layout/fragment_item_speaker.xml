@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tvItemScheduleConferenceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre de la empresa"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    />
+
+                <TextView
+                    android:id="@+id/tvItemScheduleConferenceSpeakers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del productor"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:lines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tvItemScheduleTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Ubicacion"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
