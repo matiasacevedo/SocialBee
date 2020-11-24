@@ -7,17 +7,7 @@
     android:layout_height="match_parent"
     tools:context="project.socialbee.view.ui.fragments.RegisterFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Toolbar
-            android:id="@+id/toolbarMain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/appbar"/>
 
     <ScrollView
         android:layout_width="match_parent"

@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#9E9E9E</color>
     <color name="colorPrimaryDark">#616161</color>
-    <color name="colorAccent">#FEC70C</color>
+    <color name="colorAccent">#f6bf27</color> <!-- Farrow & Ball #f6bf27 -->
 
     <!--Algo  -->
     <color name="editTextColorWhite">#FFFFFF</color>

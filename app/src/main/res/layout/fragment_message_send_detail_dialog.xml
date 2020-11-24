@@ -6,18 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="project.socialbee.view.ui.fragments.MessageSendDetailDialogFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
+    <include layout="@layout/appbar"/>
 
     <FrameLayout
         android:layout_width="match_parent"

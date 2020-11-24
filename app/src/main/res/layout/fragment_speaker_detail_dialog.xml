@@ -8,17 +8,8 @@
     tools:context="project.socialbee.view.ui.fragments.SpeakerDetailDialogFragment">
 
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+    <include layout="@layout/appbar"/>
 
-        <Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

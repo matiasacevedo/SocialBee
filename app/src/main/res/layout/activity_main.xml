@@ -7,23 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.activities.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Toolbar
-            android:id="@+id/toolbarMain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/toolbarImage"
-                android:scaleType="centerCrop"
-                android:src="@drawable/banner_social_bee" />
-
-        </Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/appbar"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
