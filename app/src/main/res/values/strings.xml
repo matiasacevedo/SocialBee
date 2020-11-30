@@ -13,5 +13,6 @@
     <string name="hint_password_create_account">Contraseña</string>
     <string name="hint_confirm_password">Confirme contraseña</string>
     <string name="text_button_joinus">Unirse</string>
+    <string name="text_button_register">Registrarse</string>
 
 </resources>
