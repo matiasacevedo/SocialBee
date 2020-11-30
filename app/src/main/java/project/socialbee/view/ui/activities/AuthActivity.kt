@@ -13,8 +13,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import project.socialbee.R
 import project.socialbee.view.model.GeneralData
-import project.socialbee.view.ui.fragments.HomeFragment
-import project.socialbee.view.ui.fragments.ProviderType
+
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,7 +74,7 @@ class AuthActivity : AppCompatActivity() {
     }
 
     private fun showHome (email: String, provider: ProviderType){
-        val homeIntent = Intent(this, HomeFragment::class.java).apply {
+        val homeIntent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
