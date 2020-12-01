@@ -15,4 +15,13 @@
     <string name="text_button_joinus">Unirse</string>
     <string name="text_button_register">Registrarse</string>
 
+    <string name="text_info_title">Abren un curso gratuito para aprender sobre apicultura sustentable</string>
+    <string name="text_info_detail_title">Se trata de una propuesta dinámica y participativa que no requiere de conocimientos previos. El curso del INTA arrancará el 4 de enero y ya se encuentra abierta su inscripción.</string>
+
+    <string name="text_info_title2">Apicultura: los consejos para prevenir el COVID-19 en la preparación de colmenas</string>
+    <string name="text_info_detail_title2">El Programa Nacional Apícola del INTA (PROAPI), junto a otras instituciones como SENASA y Universidades, desarrollaron una serie de recomendaciones en plena preparación de colmenas, para no perder productividad pero resguardando siempre la salud de los trabajadores.</string>
+
+    <string name="text_info_title3">Declararon a las abejas como el animal más importante de la tierra</string>
+    <string name="text_info_detail_title3">Así lo expresó el Earthwatch institute en la última reunión que mantuvo la Real Sociedad de Geografía de Londres. Se las eligió por lo fundamentales que son a la hora de la reproducción de las plantas.</string>
+
 </resources>

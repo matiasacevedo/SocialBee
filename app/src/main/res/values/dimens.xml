@@ -14,5 +14,10 @@
     <dimen name="imageLayoutWidth">100dp</dimen>
     <dimen name="layoutMarginImage">10dp</dimen>
     <dimen name="textMarginTop">30px</dimen>
+    <dimen name="cardCornerRadius">4dp</dimen>
+    <dimen name="imageViewHome">150dp</dimen>
+    <dimen name="marginHomeSuptitulo">10dp</dimen>
+    <dimen name="tamanioTitulo">20sp</dimen>
+    <dimen name="tamanioSubtitulo">15sp</dimen>
 
 </resources>

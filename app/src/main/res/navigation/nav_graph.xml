@@ -38,13 +38,14 @@
         android:name="project.socialbee.view.ui.fragments.MapDetailDialogFragment"
         android:label="MapDetailDialog"
         tools:layout="@layout/fragment_map_detail_dialog"/>
-    <activity
+
+    <fragment
         android:id="@+id/navHomeFragment"
-        android:name="project.socialbee.view.ui.activities.HomeActivity"
-        android:label="activity_home"
-        tools:layout="@layout/activity_home" >
-    <action
-        android:id="@+id/action_Home_to_SpeakerDetailDialogFragment"
-        app:destination="@+id/navSpeakersFragment" />
-    </activity>
+        android:name="project.socialbee.view.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_navSpeakersFragment"
+            app:destination="@id/navSpeakersFragment" />
+    </fragment>
 </navigation>
