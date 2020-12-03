@@ -1,6 +1,7 @@
 package project.socialbee.view.model
+import java.io.Serializable
 
-class GeneralData {
+class GeneralData : Serializable {
     var title = ""
     var photo = ""
     var latitude = ""

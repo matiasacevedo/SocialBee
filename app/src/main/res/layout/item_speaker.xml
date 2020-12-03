@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/ivImage"
+            android:id="@+id/ivItemSpeakerImage"
             android:layout_width="@dimen/imageLayoutWidth"
             android:layout_height="@dimen/imageLayoutHeight"
             android:layout_gravity="center_vertical"
@@ -34,7 +34,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tvItemScheduleConferenceName"
+                    android:id="@+id/tvItemSpeakerTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -44,12 +44,12 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/tvItemScheduleConferenceSpeakers"
+                    android:id="@+id/tvItemSpeakerUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:lines="1"
-                    android:text="Nombre del productor"
+                    android:text="Usuario"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp" />
 

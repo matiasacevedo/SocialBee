@@ -23,5 +23,8 @@
 
     <string name="text_info_title3">Declararon a las abejas como el animal más importante de la tierra</string>
     <string name="text_info_detail_title3">Así lo expresó el Earthwatch institute en la última reunión que mantuvo la Real Sociedad de Geografía de Londres. Se las eligió por lo fundamentales que son a la hora de la reproducción de las plantas.</string>
+    <string name="title_initial">Inicio</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_map">Mapa</string>
 
 </resources>

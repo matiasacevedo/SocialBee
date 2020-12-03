@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/navHomeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="project.socialbee.view.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        app:navGraph="@navigation/nav_graph"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_navSpeakersFragment"
+            app:destination="@id/navSpeakersFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navMapFragment"
@@ -14,11 +26,13 @@
             android:id="@+id/action_navMapFragment_to_MapDetailDialogFragment"
             app:destination="@id/MapDetailDialogFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/navSpeakersFragment"
         android:name="project.socialbee.view.ui.fragments.SpeakersFragment"
         android:label="fragment_speakers"
-        tools:layout="@layout/fragment_speakers" >
+        tools:layout="@layout/fragment_speakers"
+        app:startDestination="@id/action_speakersFragment_to_SpeakerDetailDialogFragment">
         <action
             android:id="@+id/action_speakersFragment_to_mapFragment"
             app:destination="@id/navMapFragment" />
@@ -39,13 +53,4 @@
         android:label="MapDetailDialog"
         tools:layout="@layout/fragment_map_detail_dialog"/>
 
-    <fragment
-        android:id="@+id/navHomeFragment"
-        android:name="project.socialbee.view.ui.fragments.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_navSpeakersFragment"
-            app:destination="@id/navSpeakersFragment" />
-    </fragment>
 </navigation>
