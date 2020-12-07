@@ -21,13 +21,7 @@ import com.google.android.gms.maps.model.*
 import kotlinx.android.synthetic.main.fragment_map.*
 import project.socialbee.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-
-class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+class MapFragment : DialogFragment(), OnMapReadyCallback/*, GoogleMap.OnMarkerClickListener*/ {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,10 +38,11 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
         return inflater.inflate(R.layout.fragment_map, container, false)
     }
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    //@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         /*Desde el boton BACK del fragment de cierra la activity*/
+
         toolbarMap.navigationIcon = ContextCompat.getDrawable(view.context, R.drawable.ic_close_white)
         toolbarMap.setTitleTextColor(Color.WHITE)
         toolbarMap.setNavigationOnClickListener{
@@ -64,7 +59,7 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {
-
+/*
         /// Obtenemos los valores que vienen del MenuItemActivity
         /// El operador !! evalúa que no vengan valores nulos
 /*        if (arguments != null){
@@ -74,8 +69,8 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
 
         }*/
 
-        val latitude = (requireArguments().getString("latitud"))?.toDouble()
-        val longitude = requireArguments().getString("longitud")?.toDouble()
+        val latitude = (requireArguments().getString("latitude"))?.toDouble()
+        val longitude = requireArguments().getString("longitude")?.toDouble()
         val user = requireArguments().getString("user")
 
         /*val post = Post()*/
@@ -108,9 +103,9 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
 
         googleMap?.setMapStyle(MapStyleOptions.loadRawResourceStyle(context, R.raw.custom_map))
 
-
+*/
     }
-
+    /*
     /// Si se hace click en el marcador se muestra el nombre del lugar donde se originó la publicación
     override fun onMarkerClick(p0: Marker?): Boolean {
         val user = requireArguments().getString("user")
@@ -123,4 +118,6 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
         }
         return true;
     }
+    */
+
 }
