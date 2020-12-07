@@ -74,5 +74,4 @@ class SpeakersFragment : Fragment(), GeneralDataListener {
         val bundle = bundleOf("data" to data)
         findNavController().navigate(R.id.SpeakerDetailDialogFragment, bundle)
     }
-
 }
