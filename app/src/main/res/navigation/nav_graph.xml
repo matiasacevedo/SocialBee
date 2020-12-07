@@ -31,8 +31,11 @@
         android:id="@+id/navSpeakersFragment"
         android:name="project.socialbee.view.ui.fragments.SpeakersFragment"
         android:label="fragment_speakers"
-        tools:layout="@layout/fragment_speakers"
-        app:startDestination="@id/action_speakersFragment_to_SpeakerDetailDialogFragment">
+        tools:layout="@layout/fragment_speakers">
+        <!--
+        app:startDestination="@id/action_speakersFragment_to_SpeakerDetailDialogFragment"
+        -->
+        >
         <action
             android:id="@+id/action_speakersFragment_to_mapFragment"
             app:destination="@id/navMapFragment" />

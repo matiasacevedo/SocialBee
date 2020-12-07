@@ -52,7 +52,7 @@ class SpeakersFragment : Fragment(), GeneralDataListener {
             adapter = generalDataAdapter
         }
 
-        //observerViewModel()
+        observerViewModel()
 
     }
 
@@ -74,5 +74,4 @@ class SpeakersFragment : Fragment(), GeneralDataListener {
         var bundle = bundleOf("GeneralData" to data)
         findNavController().navigate(R.id.SpeakerDetailDialogFragment, bundle)
     }
-
 }
