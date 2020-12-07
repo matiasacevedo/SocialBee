@@ -19,20 +19,16 @@ class GeneralDataViewModel : ViewModel() {
         getSpeakerFromFirebase()
     }
 
-    fun  getSpeakerFromFirebase(){
+    private fun  getSpeakerFromFirebase(){
         firestoreService.getGeneralData(object : Callback<List<GeneralData>> {
             override fun onSuccess(result: List<GeneralData>?) {
                 listGeneralData.postValue(result)
-                proccessFinish()
+                isLoading.value = true     //process finish
             }
 
             override fun onFailed(exception: Exception) {
-                proccessFinish()
+                isLoading.value = true     //process finish
             }
         })
-    }
-
-    fun proccessFinish(){
-        isLoading.value = true
     }
 }

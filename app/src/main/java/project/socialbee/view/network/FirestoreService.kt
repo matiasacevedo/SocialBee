@@ -4,7 +4,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import project.socialbee.view.model.GeneralData
 
-const val GENERAL_DATA_COLLECTION_NAME = "generaldata"
+const val GENERAL_DATA_COLLECTION_NAME = "GeneralData"
 
 class FirestoreService {
     private val firebaseFirestore = FirebaseFirestore.getInstance()
