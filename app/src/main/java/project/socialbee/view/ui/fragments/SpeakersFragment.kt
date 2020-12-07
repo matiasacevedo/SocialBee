@@ -16,7 +16,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.fragment_speakers.*
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import project.socialbee.view.adapter.GeneralDataListener
+
 
 class SpeakersFragment : Fragment(), GeneralDataListener {
 
@@ -44,26 +46,24 @@ class SpeakersFragment : Fragment(), GeneralDataListener {
 
         viewModel = ViewModelProviders.of(this).get(GeneralDataViewModel::class.java)
         viewModel.refresh()
-
         generalDataAdapter = GeneralDataAdapter(this)
-
         rvSpeakers.apply {
-            layoutManager = GridLayoutManager(context,2)
+            layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
             adapter = generalDataAdapter
         }
 
-        //observerViewModel()
+        observerViewModel()
 
     }
 
-    fun  observerViewModel() {
-        viewModel.listGeneralData.observe(this,
+    private fun  observerViewModel() {
+        viewModel.listGeneralData.observe(viewLifecycleOwner,
             Observer<List<GeneralData>>{ data ->
                 data.let {
                     generalDataAdapter.updateData((data))
                 }
             })
-        viewModel.isLoading.observe(this, Observer<Boolean> {
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer<Boolean> {
             if(it != null)
                 rlBase.visibility = View.INVISIBLE
         })
@@ -71,7 +71,7 @@ class SpeakersFragment : Fragment(), GeneralDataListener {
     }
 
     override fun onSpeakerClicked(data: GeneralData, position: Int) {
-        var bundle = bundleOf("GeneralData" to data)
+        val bundle = bundleOf("data" to data)
         findNavController().navigate(R.id.SpeakerDetailDialogFragment, bundle)
     }
 

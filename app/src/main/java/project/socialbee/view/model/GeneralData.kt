@@ -8,4 +8,5 @@ class GeneralData : Serializable {
     var longitude = ""
     var description = ""
     var user = ""
+    var twitter = ""
 }

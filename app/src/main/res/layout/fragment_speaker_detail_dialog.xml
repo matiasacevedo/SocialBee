@@ -7,9 +7,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="project.socialbee.view.ui.fragments.SpeakerDetailDialogFragment">
 
-
-    <include layout="@layout/appbar"/>
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +20,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="8dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp">
@@ -32,50 +29,72 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="1dp">
 
                     <ImageView
                         android:id="@+id/ivDetailSpeakerImage"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_width="230dp"
+                        android:layout_height="230dp"
                         android:src="@mipmap/ic_launcher"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="40dp"/>
+                        android:layout_marginTop="20dp"/>
                     <TextView
                         android:id="@+id/tvSpeakerTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Speaker Name"
                         android:gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:textSize="30sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimaryDark"
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"/>
                     <TextView
-                        android:id="@+id/tvDescription"
+                        android:id="@+id/tvUser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Workplace"
+                        android:text="User"
                         android:gravity="center_horizontal"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"/>
-                    <ImageView
-                        android:id="@+id/ivDetailSpeakerTwitter"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_twitter_icon"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="center_horizontal"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="10dp">
+                        <ImageView
+                            android:id="@+id/imgDetailSpeakerTwitter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_twitter_icon"
+                            android:layout_marginTop="12dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:id="@+id/ivDetailSpeakerTwitter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="twitter"
+                            android:gravity="left"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="15dp"/>
+
+                    </LinearLayout>
+
                     <TextView
-                        android:id="@+id/tvUser"
+                        android:id="@+id/tvDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lorem ipsum"
+                        android:text="Description"
+                        android:layout_gravity="center_vertical|end"
                         android:gravity="left"
                         android:textSize="15sp"
                         android:textColor="@color/colorPrimary"
