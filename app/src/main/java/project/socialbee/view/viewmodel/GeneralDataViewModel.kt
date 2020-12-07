@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import project.socialbee.view.model.GeneralData
 import project.socialbee.view.network.Callback
 import project.socialbee.view.network.FirestoreService
+import java.lang.Exception
 
 class GeneralDataViewModel : ViewModel() {
     // esto se a encargar de comunicar con lo que hicimos con la UI con Firestore
