@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".view.ui.activities.MenuItemActivity"></activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD9RXov1DxQEEeDKnhkjX8y4yQodPDTjnA"/>
+            android:value="AIzaSyDqINd0MOD37v4B-wxPkfy-W18fvFyG-Hw" />
 
-        <activity android:name=".view.ui.activities.MainActivity"/>
+        <activity android:name=".view.ui.activities.MainActivity" />
         <activity android:name=".view.ui.activities.AuthActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

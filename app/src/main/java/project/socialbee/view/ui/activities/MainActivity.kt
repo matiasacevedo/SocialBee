@@ -11,6 +11,7 @@ import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import kotlinx.android.synthetic.main.activity_main.*
 import project.socialbee.R
+import project.socialbee.view.ui.fragments.MapFragment
 
 enum class ProviderType{
     BASIC

@@ -21,7 +21,7 @@ import com.google.android.gms.maps.model.*
 import kotlinx.android.synthetic.main.fragment_map.*
 import project.socialbee.R
 
-class MapFragment : DialogFragment(), OnMapReadyCallback/*, GoogleMap.OnMarkerClickListener*/ {
+class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,7 @@ class MapFragment : DialogFragment(), OnMapReadyCallback/*, GoogleMap.OnMarkerCl
         return inflater.inflate(R.layout.fragment_map, container, false)
     }
 
-    //@RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         /*Desde el boton BACK del fragment de cierra la activity*/
@@ -59,13 +59,16 @@ class MapFragment : DialogFragment(), OnMapReadyCallback/*, GoogleMap.OnMarkerCl
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {
-/*
+
         /// Obtenemos los valores que vienen del MenuItemActivity
         /// El operador !! evalúa que no vengan valores nulos
-/*        if (arguments != null){
-            val latitude = (arguments!!.getString("latitud"))?.toDouble()
-            val longitude = arguments!!.getString("longitud")?.toDouble()
-            val user = arguments!!.getString("user")
+      /*  var latitude =""
+        var longitude=""
+        var user =""
+        if (arguments != null){
+            latitude = (requireArguments().getString("latitude"))?.toDouble()
+            longitude = requireArguments().getString("longitude")?.toDouble()
+            user = requireArguments().getString("user")
 
         }*/
 
@@ -103,9 +106,9 @@ class MapFragment : DialogFragment(), OnMapReadyCallback/*, GoogleMap.OnMarkerCl
 
         googleMap?.setMapStyle(MapStyleOptions.loadRawResourceStyle(context, R.raw.custom_map))
 
-*/
+
     }
-    /*
+
     /// Si se hace click en el marcador se muestra el nombre del lugar donde se originó la publicación
     override fun onMarkerClick(p0: Marker?): Boolean {
         val user = requireArguments().getString("user")
@@ -118,6 +121,6 @@ class MapFragment : DialogFragment(), OnMapReadyCallback/*, GoogleMap.OnMarkerCl
         }
         return true;
     }
-    */
+
 
 }
