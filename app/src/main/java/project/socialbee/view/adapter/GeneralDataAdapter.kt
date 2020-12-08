@@ -1,5 +1,7 @@
 package project.socialbee.view.adapter
 
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +13,8 @@ import project.socialbee.R
 import project.socialbee.view.model.GeneralData
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import project.socialbee.view.ui.activities.MenuItemActivity
 import project.socialbee.view.ui.fragments.SpeakersFragment
-import kotlinx.android.synthetic.main.item_speaker.*
-
 
 class GeneralDataAdapter(private val speakerFragment : GeneralDataListener) : RecyclerView.Adapter<GeneralDataAdapter.ViewHolder>(){
 
@@ -41,7 +42,7 @@ class GeneralDataAdapter(private val speakerFragment : GeneralDataListener) : Re
             speakerFragment.onSpeakerClicked(generalData, position)
         }
 
-        //.set
+        holder.setOnClickListener()
     }
 
     fun updateData(data: List<GeneralData>){
@@ -70,19 +71,16 @@ class GeneralDataAdapter(private val speakerFragment : GeneralDataListener) : Re
         }
 
         override fun onClick(p0: View?) {
+            val id = p0?.getId()
 
-            var id = p0?.getId()
+            val lat = tvLatitude.text
+            val lon = tvLongitude.text
+            val user = tvUser.text
 
-            // Se obtinen los datos de la card para pasar al mapa
-            var lat = tvLatitude.text
-            var lon = tvLongitude.text
-            var user = tvUser.text
-            /*
-            when(id){
+            when (id) {
                 R.id.ibLocation -> run {
                     val intent = Intent(context, MenuItemActivity::class.java).apply{
-                        putExtra("codigo", "map")
-                        /*putExtra("latitude", tvLatitude.toString())*/
+                        putExtra("code", "map")
                         putExtra("latitude", lat.toString())
                         putExtra("longitude", lon.toString())
                         putExtra("user", user.toString())
@@ -91,19 +89,19 @@ class GeneralDataAdapter(private val speakerFragment : GeneralDataListener) : Re
                 }
                 R.id.ibShare -> run {
                     val intent = Intent(context, MenuItemActivity::class.java).apply{
-                        putExtra("codigo", "share")
+                        putExtra("code", "share")
                     }
                     context.startActivity(intent)
                 }
                 R.id.ibMessage -> run {
                     val intent = Intent(context, MenuItemActivity::class.java).apply{
-                        putExtra("codigo", "message")
+                        putExtra("code", "message")
                     }
                     context.startActivity(intent)
                 }
             }
 
-             */
+
         }
 
 
