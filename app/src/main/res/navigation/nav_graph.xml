@@ -39,6 +39,10 @@
         <action
             android:id="@+id/action_speakersFragment_to_SpeakerDetailDialogFragment"
             app:destination="@id/SpeakerDetailDialogFragment" />
+        <action
+            android:id="@+id/action_navSpeakersFragment_to_messageSendDetailDialogFragment"
+            app:destination="@id/messageSendDetailDialogFragment"
+            app:popUpTo="@id/navSpeakersFragment" />
     </fragment>
 
     <dialog
@@ -52,5 +56,10 @@
         android:name="project.socialbee.view.ui.fragments.MapDetailDialogFragment"
         android:label="MapDetailDialog"
         tools:layout="@layout/fragment_map_detail_dialog"/>
+    <dialog
+        android:id="@+id/messageSendDetailDialogFragment"
+        android:name="project.socialbee.view.ui.fragments.MessageSendDetailDialogFragment"
+        android:label="fragment_message_send_detail_dialog"
+        tools:layout="@layout/fragment_message_send_detail_dialog" />
 
 </navigation>

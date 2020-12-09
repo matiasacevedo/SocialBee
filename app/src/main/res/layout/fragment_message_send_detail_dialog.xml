@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="170dp"
-                android:layout_marginLeft="180dp">
+                android:layout_marginLeft="140dp">
                 <Button
                     android:id="@+id/btnSendMessage"
                     android:layout_width="wrap_content"
@@ -63,15 +63,8 @@
                     />
             </LinearLayout>
 
-
-
-
         </androidx.cardview.widget.CardView>
 
-
-
-
     </FrameLayout>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
