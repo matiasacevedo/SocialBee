@@ -20,14 +20,19 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import kotlinx.android.synthetic.main.fragment_map.*
 import project.socialbee.R
+import project.socialbee.view.adapter.GeneralDataAdapter
+import project.socialbee.view.adapter.GeneralDataListener
+import project.socialbee.view.model.GeneralData
+import project.socialbee.view.viewmodel.GeneralDataViewModel
 
-class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+class MapFragment : DialogFragment(),
+                    OnMapReadyCallback,
+                    GoogleMap.OnMarkerClickListener,
+                    GeneralDataListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
     }
 
     override fun onCreateView(
@@ -41,17 +46,6 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /*Desde el boton BACK del fragment de cierra la activity*/
-
-        toolbarMap.navigationIcon = ContextCompat.getDrawable(view.context, R.drawable.ic_close_white)
-        toolbarMap.setTitleTextColor(Color.WHITE)
-        toolbarMap.setNavigationOnClickListener{
-            dismiss()
-            val act = getActivity()
-            if (act != null) {
-                act.finish()
-            }
-        }
 
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
 
@@ -60,40 +54,15 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
 
     override fun onMapReady(googleMap: GoogleMap?) {
 
-        /// Obtenemos los valores que vienen del MenuItemActivity
-        /// El operador !! evalúa que no vengan valores nulos
-        /*  var latitude =""
-          var longitude=""
-          var user =""
-          if (arguments != null){
-              latitude = (requireArguments().getString("latitude"))?.toDouble()
-              longitude = requireArguments().getString("longitude")?.toDouble()
-              user = requireArguments().getString("user")
-
-          }*/
-
-        val latitude = (requireArguments().getString("latitude"))?.toDouble()
-        val longitude = requireArguments().getString("longitude")?.toDouble()
-        val user = requireArguments().getString("user")
-
-        /*val post = Post()*/
-
-        /* /// Conversión de string a double
-         val latitude : Double = latitu
-         val longitude : Double = longitude.toDouble()*/
-
-/*        val latitude = -34.581763
-        val longitude = -58.404363*/
-
+        val generalData = GeneralData()
         val zoom = 16f
-        val centerMap = LatLng(latitude!!, longitude!!)
-
+        val centerMap = LatLng(-32.4773196, -58.2482894)
         googleMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(centerMap, zoom))
 
-        val centerMark = LatLng(latitude, longitude)
+        val centerMark = LatLng(-32.47482, -58.24149)
         val markerOptions = MarkerOptions()
         markerOptions.position(centerMark)
-        markerOptions.title(user)
+        markerOptions.title("User Test")
 
         val bitmapDraw = context?.applicationContext?.let { ContextCompat.getDrawable(it, R.drawable.pin) as BitmapDrawable }
         val smallMarker = bitmapDraw?.bitmap?.let { Bitmap.createScaledBitmap(it, 150, 150, false) }
@@ -103,24 +72,17 @@ class MapFragment : DialogFragment(), OnMapReadyCallback, GoogleMap.OnMarkerClic
         googleMap?.addMarker(markerOptions)
         googleMap?.setOnMarkerClickListener(this)
 
-
         googleMap?.setMapStyle(MapStyleOptions.loadRawResourceStyle(context, R.raw.custom_map))
-
 
 
     }
 
-    /// Si se hace click en el marcador se muestra el nombre del lugar donde se originó la publicación
     override fun onMarkerClick(p0: Marker?): Boolean {
-        val user = requireArguments().getString("user")
-        if (p0 != null) {
-            if (p0.isInfoWindowShown()) {
-                p0.hideInfoWindow();
-            } else {
-                p0.showInfoWindow();
-            }
-        }
-        return true;
+        TODO("Not yet implemented")
+    }
+
+    override fun onSpeakerClicked(data: GeneralData, position: Int) {
+        TODO("Not yet implemented")
     }
 
 

@@ -87,12 +87,6 @@ class GeneralDataAdapter(private val speakerFragment : GeneralDataListener) : Re
                     }
                     context.startActivity(intent)
                 }
-                R.id.ibShare -> run {
-                    val intent = Intent(context, MenuItemActivity::class.java).apply{
-                        putExtra("code", "share")
-                    }
-                    context.startActivity(intent)
-                }
                 R.id.ibMessage -> run {
                     val intent = Intent(context, MenuItemActivity::class.java).apply{
                         putExtra("code", "message")
