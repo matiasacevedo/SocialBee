@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_homeFragment_to_navSpeakersFragment"
             app:destination="@id/navSpeakersFragment" />
+        <action
+            android:id="@+id/action_navHomeFragment_to_navMapFragment"
+            app:destination="@id/navMapFragment" />
     </fragment>
 
     <fragment
@@ -33,9 +36,6 @@
         android:label="fragment_speakers"
         tools:layout="@layout/fragment_speakers"
         app:startDestination="@+id/action_speakersFragment_to_SpeakerDetailDialogFragment">
-        <action
-            android:id="@+id/action_speakersFragment_to_mapFragment"
-            app:destination="@id/navMapFragment" />
         <action
             android:id="@+id/action_speakersFragment_to_SpeakerDetailDialogFragment"
             app:destination="@id/SpeakerDetailDialogFragment" />
